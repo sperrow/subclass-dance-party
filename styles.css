@@ -2,6 +2,9 @@ body, html{
   height:100%;
 }
 body{
+  /*background: url("http://images2.layoutsparks.com/1/130024/disco-dance-request-lights.gif");*/
+  background: url('http://lawsoneventrentals.com/wp-content/uploads/2013/04/LED-Light-Up-Dance-Floor.jpg');
+  background-size: cover;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -9,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .lineUpButton, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
@@ -21,7 +24,42 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
 }
+.blinky-dancer{
+  border:10px solid red;
+  border-radius:10px;
+}
+.square-dancer{
+  border:10px solid yellow;
+}
+.spin-dancer{
+  border: 14px solid orange;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+.disco-dancer{
+  width: 300px;
+  height: 300px;
+  background-image: url('http://emojipedia.org/wp-content/uploads/2014/04/1f483-google-android.png');
+  background-size: 300px;
+}
+.flip{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.partner-dancer{
+  width: 300px;
+  height: 300px;
+  background-image: url('http://cdn.flaticon.com/png/256/40267.png');
+  background-size: 300px;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

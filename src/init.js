@@ -22,12 +22,25 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+  });
+
+  $(".lineUpButton").on("click", function(event){
+    for(var i = 0; i < window.dancers.length; i++) {
+      dancers[i].lineUp();
+    }
+  });
+
+  $("body").on("mouseover", ".dancer", function(event) {
+    var top = $("body").height() * Math.random();
+    var left = $("body").width() * Math.random();
+    $(this).css({"top": top, "left": left});
   });
 });
 
